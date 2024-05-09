@@ -1,0 +1,22 @@
+CREATE TABLE pro_07(id INT AUTO_INCREMENT PRIMARY KEY,fname VARCHAR(50),lname VARCHAR(50),email VARCHAR(50),mobile VARCHAR(10),gender VARCHAR(10),pass VARCHAR(20));
+CREATE TABLE delete_user(id INT AUTO_INCREMENT PRIMARY KEY,fname VARCHAR(50),lname VARCHAR(50),email VARCHAR(50),mobile VARCHAR(10),gender VARCHAR(10),pass VARCHAR(20));
+
+
+
+
+trigeer : 
+
+DELIMITER $$
+
+CREATE
+    
+    TRIGGER `program_07`.userdeleted BEFORE DELETE
+    ON `program_07`.pro_07
+    FOR EACH ROW BEGIN
+	
+	INSERT INTO delete_user(id,fname,lname,`email`,`mobile`,`gender`,`pass`) VALUE(old.id,old.fname,old.lname,old.email,old.mobile,old.gender,old.pass);
+	
+    END$$
+
+DELIMITER ;
+

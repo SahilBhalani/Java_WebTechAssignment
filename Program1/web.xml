@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" version="5.0">
+  <display-name>Assingment_WebTech</display-name>
+
+
+<servlet>
+	
+	<servlet-name>registration</servlet-name>
+	<servlet-class>com.registration</servlet-class>
+	
+	<init-param>
+	<param-name>uname</param-name>
+	<param-value>admin</param-value>
+	</init-param>
+	
+	<init-param>
+	<param-name>pass</param-name>
+	<param-value>admin</param-value>
+	</init-param>
+	
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>registration</servlet-name>
+	<url-pattern>/reg</url-pattern>
+	</servlet-mapping>
+
+</web-app>
